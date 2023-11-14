@@ -7,6 +7,7 @@ import {
 	ArrowRight,
 	ArrowDown,
 	SubMenuItem,
+	CatalogLink,
 } from '../../../Theme/BurgerMenuThema';
 import openMenu from '../../../images/icon/cancel-menu.webp';
 import closeMenu from '../../../images/icon/menu-2.webp';
@@ -60,31 +61,59 @@ const BurgerMenu: FC<HeaderBurgerMenuProps> = React.memo(
 						'aria-labelledby': 'button-burgerMenu',
 					}}
 				>
-					<CustomLink onClick={toggleActive} to="/">
+					<CatalogLink onClick={toggleActive}>
 						<MenuItem disableRipple divider onClick={handleOpenSubMenu}>
 							<BtnCatalogLine $active={isActive} />
 							Каталог
 							{!openSubMenu ? <ArrowRight /> : <ArrowDown />}
 						</MenuItem>
-					</CustomLink>
+					</CatalogLink>
 					<Collapse in={openSubMenu} timeout="auto" unmountOnExit>
 						<SubMenuItem to="/kiev">
-							<MenuItem disableRipple divider onClick={handleCloseBurgerMenu}>
+							<MenuItem
+								disableRipple
+								divider
+								onClick={() => {
+									handleCloseBurgerMenu();
+									handleOpenSubMenu();
+								}}
+							>
 								“Сорочки Київщини”
 							</MenuItem>
 						</SubMenuItem>
 						<SubMenuItem to="regions">
-							<MenuItem disableRipple divider onClick={handleCloseBurgerMenu}>
+							<MenuItem
+								disableRipple
+								divider
+								onClick={() => {
+									handleCloseBurgerMenu();
+									handleOpenSubMenu();
+								}}
+							>
 								“Регіони України”
 							</MenuItem>
 						</SubMenuItem>
 						<SubMenuItem to="/grandmother">
-							<MenuItem disableRipple divider onClick={handleCloseBurgerMenu}>
+							<MenuItem
+								disableRipple
+								divider
+								onClick={() => {
+									handleCloseBurgerMenu();
+									handleOpenSubMenu();
+								}}
+							>
 								“Віднови вишиванку своєї бабусі”
 							</MenuItem>
 						</SubMenuItem>
 						<SubMenuItem to="/accessories">
-							<MenuItem disableRipple divider onClick={handleCloseBurgerMenu}>
+							<MenuItem
+								disableRipple
+								divider
+								onClick={() => {
+									handleCloseBurgerMenu();
+									handleOpenSubMenu();
+								}}
+							>
 								Аксесуари
 							</MenuItem>
 						</SubMenuItem>

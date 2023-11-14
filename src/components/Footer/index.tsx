@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { FC } from 'react';
 import { Collapse } from '@mui/material';
 import FooterLogo from '../../images/logo/logo_free_thread.webp';
@@ -17,11 +18,12 @@ import {
 	IconMenuBank,
 	ArrowRight,
 	ArrowDown,
-	CustomLink,
 	SubMenuItem,
+	CustomLink,
 	CustomMenuItem,
 	CustomSubMenuItem,
 } from '../../Theme/FooterThema';
+import { CatalogLink } from '../../Theme/BurgerMenuThema';
 
 interface FooterProps {
 	openSubMenu: boolean;
@@ -30,6 +32,11 @@ interface FooterProps {
 }
 
 const Footer: FC<FooterProps> = ({ handleOpenSubMenu, openSubMenu, handleCloseSubMenu }) => {
+	const upPage = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+		handleCloseSubMenu();
+	};
+
 	return (
 		<FooterWrap>
 			<LogoWrapper>
@@ -38,39 +45,46 @@ const Footer: FC<FooterProps> = ({ handleOpenSubMenu, openSubMenu, handleCloseSu
 			<WrappMenuFooter>
 				<MenuFooter>
 					<TitleMenu>Про компанію</TitleMenu>
-					<li>Про нас</li>
-					<CustomLink to="/">
+					<CustomLink to="/about" onClick={upPage}>
+						Про нас
+					</CustomLink>
+					<CatalogLink>
 						<CustomMenuItem disableRipple divider onClick={handleOpenSubMenu}>
 							Каталог
 							{!openSubMenu ? <ArrowRight /> : <ArrowDown />}
 						</CustomMenuItem>
-					</CustomLink>
+					</CatalogLink>
 					<Collapse in={openSubMenu} timeout="auto" unmountOnExit>
-						<SubMenuItem to="/products">
-							<CustomSubMenuItem disableRipple divider onClick={handleCloseSubMenu}>
+						<SubMenuItem to="/kiev">
+							<CustomSubMenuItem disableRipple divider onClick={upPage}>
 								“Сорочки Київщини”
 							</CustomSubMenuItem>
 						</SubMenuItem>
-						<SubMenuItem to="/guarantee">
-							<CustomSubMenuItem disableRipple divider onClick={handleCloseSubMenu}>
+						<SubMenuItem to="/regions">
+							<CustomSubMenuItem disableRipple divider onClick={upPage}>
 								“Регіони України”
 							</CustomSubMenuItem>
 						</SubMenuItem>
-						<SubMenuItem to="/paymentAndDelivery">
-							<CustomSubMenuItem disableRipple divider onClick={handleCloseSubMenu}>
+						<SubMenuItem to="/grandmother">
+							<CustomSubMenuItem disableRipple divider onClick={upPage}>
 								“Віднови вишиванку своєї бабусі”
 							</CustomSubMenuItem>
 						</SubMenuItem>
-						<SubMenuItem to="/contacts">
-							<CustomSubMenuItem disableRipple divider onClick={handleCloseSubMenu}>
+						<SubMenuItem to="/accessories">
+							<CustomSubMenuItem disableRipple divider onClick={upPage}>
 								Аксесуари
 							</CustomSubMenuItem>
 						</SubMenuItem>
 					</Collapse>
-
-					<li>Доставка і оплата</li>
-					<li>Відгуки</li>
-					<li>Контакти</li>
+					<CustomLink to="/delivery" onClick={upPage}>
+						Доставка і оплата
+					</CustomLink>
+					<CustomLink to="/comments" onClick={upPage}>
+						Відгуки
+					</CustomLink>
+					<CustomLink to="/contacts" onClick={upPage}>
+						Контакти
+					</CustomLink>
 				</MenuFooter>
 				<MenuFooter>
 					<TitleMenu>Контакти</TitleMenu>
@@ -88,8 +102,20 @@ const Footer: FC<FooterProps> = ({ handleOpenSubMenu, openSubMenu, handleCloseSu
 				<MenuFooter>
 					<TitleMenu>Ми в соцмережах:</TitleMenu>
 					<li>
-						<IconMenuSocial src={logoFacebook} alt="icon Facrbook" />
-						<IconMenuSocial src={logoInstagram} alt="icon Instagrom" />
+						<a
+							href="https://www.facebook.com/vilnaNytka/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconMenuSocial src={logoFacebook} alt="icon Facebook" />
+						</a>
+						<a
+							href="https://www.instagram.com/vilnanytka/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IconMenuSocial src={logoInstagram} alt="icon Instagram" />
+						</a>
 					</li>
 					<TitleMenu>Способи оплати:</TitleMenu>
 					<li>

@@ -27,7 +27,10 @@ const MenuHeader: FC<HeaderMenuProps> = React.memo(
 						aria-controls={openCatalog ? 'menu-bayer' : undefined}
 						aria-haspopup="true"
 						aria-expanded={openCatalog ? 'true' : undefined}
-						onClick={handleClickBayer}
+						onClick={(e) => {
+							e.preventDefault();
+							handleClickBayer(e);
+						}}
 						$active={activeButtonMenu === 1}
 						disableRipple
 					>

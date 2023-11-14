@@ -51,7 +51,9 @@ const Header: FC<HeaderProps> = ({
 		<header>
 			<HeaderWrapper>
 				<LogoWrapper>
-					<Logo src={logoBig} alt="logo free thread" />
+					<a href="/">
+						<Logo src={logoBig} alt="logo free thread" />
+					</a>
 				</LogoWrapper>
 				<PhoneWrapper>
 					<img src={phone} alt="icon phone" />
