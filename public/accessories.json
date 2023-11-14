@@ -7,9 +7,9 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "accessories",
 		"imageUrls": [
-			"../src/images/Sleeves/1/sleeves_1_0.webp",
-			"../src/images/Sleeves/1/sleeves_1_1.webp",
-			"../src/images/Sleeves/1/sleeves_1_2.webp"
+			"../../src/images/Sleeves/1/sleeves_1_0.webp",
+			"../../src/images/Sleeves/1/sleeves_1_1.webp",
+			"../../src/images/Sleeves/1/sleeves_1_2.webp"
 		],
 		"size": ["One size"]
 	},
