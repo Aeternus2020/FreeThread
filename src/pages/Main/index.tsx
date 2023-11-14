@@ -16,7 +16,7 @@ const Main = () => {
 
 	useEffect(() => {
 		if (!productsArray?.length) {
-			filterProducts('shirts.json', 'accessories.json');
+			filterProducts('public/shirts.json', 'public/accessories.json');
 		}
 	}, [dispatch]);
 
