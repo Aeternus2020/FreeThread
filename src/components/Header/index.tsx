@@ -11,18 +11,14 @@ import {
 	PhoneNumber,
 	Wrapper,
 	SearchDesktop,
-	SelectLanguage,
-	BtnLang,
 	SubHeader,
 } from '../../Theme/HeaderThema';
 import logoBig from '../../images/logo/logo_free_thread.webp';
 import phone from '../../images/icon/phone.webp';
 
 interface HeaderProps {
-	activeButtonLang: number;
 	activeButtonMenu: number;
 	openSubMenu: boolean;
-	handleActiveButtonLang: (buttonIndex: number) => void;
 	handleActiveButtonMenu: (buttonIndex: number) => void;
 	handleOpenModal: () => void;
 	handleOpenSubMenu: () => void;
@@ -35,8 +31,6 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({
 	handleOpenModal,
-	handleActiveButtonLang,
-	activeButtonLang,
 	activeButtonMenu,
 	handleActiveButtonMenu,
 	openSubMenu,
@@ -67,14 +61,6 @@ const Header: FC<HeaderProps> = ({
 					<SearchDesktop>
 						<Search handleOpenModal={handleOpenModal} />
 					</SearchDesktop>
-					<SelectLanguage>
-						<BtnLang $active={activeButtonLang === 1} onClick={() => handleActiveButtonLang(1)}>
-							ua
-						</BtnLang>
-						<BtnLang $active={activeButtonLang === 2} onClick={() => handleActiveButtonLang(2)}>
-							en
-						</BtnLang>
-					</SelectLanguage>
 				</Wrapper>
 			</HeaderWrapper>
 			<SubHeader>

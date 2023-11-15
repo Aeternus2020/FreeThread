@@ -4,7 +4,7 @@
 Created by: [Olena Hodyna](https://github.com/Aeternus2020) and [Yaroslav Prystupliuk](https://github.com/YaroslavPrystupluk)
 
 [repository](https://github.com/Aeternus2020/FreeThread)
-[Pages](https://cards-rosy-alpha-29.vercel.app/)
+[Pages](https://free-thread.vercel.app)
 
 ## Technologies used:
 

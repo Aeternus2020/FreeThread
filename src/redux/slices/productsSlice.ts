@@ -57,17 +57,21 @@ const productsSlice = createSlice({
 			if (productsArray.length === 0) {
 				state.products = action.payload;
 			} else {
-				(action.payload as Product[]).forEach((product: Product) => {
-					const existingProduct = productsArray.find(
-						(existing: Product) => existing.name === product.name,
-					);
+				const payloadArray = action.payload as Product[];
 
-					if (!existingProduct) {
-						productsArray.push(product);
-					}
-				});
+				if (Array.isArray(payloadArray)) {
+					payloadArray.forEach((product: Product) => {
+						const existingProduct = productsArray.find(
+							(existing: Product) => existing.name === product.name,
+						);
 
-				state.products = productsArray;
+						if (!existingProduct) {
+							productsArray.push(product);
+						}
+					});
+
+					state.products = productsArray;
+				}
 			}
 		});
 

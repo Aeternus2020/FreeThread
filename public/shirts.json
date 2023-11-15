@@ -6,7 +6,7 @@
 		"recommendations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "grandmother",
-		"imageUrls": ["src/images/Shirts/1/shirts_1_0.webp", "src/images/Shirts/1/shirts_1_1.webp"],
+		"imageUrls": ["/images/Shirts/1/shirts_1_0.webp", "/images/Shirts/1/shirts_1_1.webp"],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
 	{
@@ -17,9 +17,9 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "grandmother",
 		"imageUrls": [
-			"src/images/Shirts/2/shirts_2_0.webp",
-			"src/images/Shirts/2/shirts_2_1.webp",
-			"src/images/Shirts/2/shirts_2_2.webp"
+			"/images/Shirts/2/shirts_2_0.webp",
+			"/images/Shirts/2/shirts_2_1.webp",
+			"/images/Shirts/2/shirts_2_2.webp"
 		],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
@@ -31,9 +31,9 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "grandmother",
 		"imageUrls": [
-			"src/images/Shirts/3/shirts_3_0.webp",
-			"src/images/Shirts/3/shirts_3_1.webp",
-			"src/images/Shirts/3/shirts_3_2.webp"
+			"/images/Shirts/3/shirts_3_0.webp",
+			"/images/Shirts/3/shirts_3_1.webp",
+			"/images/Shirts/3/shirts_3_2.webp"
 		],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
@@ -45,9 +45,9 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "kiev",
 		"imageUrls": [
-			"src/images/Shirts/4/shirts_4_0.webp",
-			"src/images/Shirts/4/shirts_4_1.webp",
-			"src/images/Shirts/4/shirts_4_2.webp"
+			"/images/Shirts/4/shirts_4_0.webp",
+			"/images/Shirts/4/shirts_4_1.webp",
+			"/images/Shirts/4/shirts_4_2.webp"
 		],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
@@ -59,9 +59,9 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "regions",
 		"imageUrls": [
-			"src/images/Shirts/5/shirts_5_0.webp",
-			"src/images/Shirts/5/shirts_5_1.webp",
-			"src/images/Shirts/5/shirts_5_2.webp"
+			"/images/Shirts/5/shirts_5_0.webp",
+			"/images/Shirts/5/shirts_5_1.webp",
+			"/images/Shirts/5/shirts_5_2.webp"
 		],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
@@ -73,9 +73,9 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "kiev",
 		"imageUrls": [
-			"src/images/Shirts/6/shirts_6_0.webp",
-			"src/images/Shirts/6/shirts_6_1.webp",
-			"src/images/Shirts/6/shirts_6_2.webp"
+			"/images/Shirts/6/shirts_6_0.webp",
+			"/images/Shirts/6/shirts_6_1.webp",
+			"/images/Shirts/6/shirts_6_2.webp"
 		],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
@@ -86,7 +86,7 @@
 		"recommendations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "regions",
-		"imageUrls": ["src/images/Shirts/7/shirts_7_0.webp", "src/images/Shirts/7/shirts_7_1.webp"],
+		"imageUrls": ["/images/Shirts/7/shirts_7_0.webp", "/images/Shirts/7/shirts_7_1.webp"],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
 	{
@@ -96,7 +96,7 @@
 		"recommendations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "regions",
-		"imageUrls": ["src/images/Shirts/8/shirts_8_0.webp"],
+		"imageUrls": ["/images/Shirts/8/shirts_8_0.webp"],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
 	{
@@ -106,7 +106,7 @@
 		"recommendations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
 		"collection": "regions",
-		"imageUrls": ["src/images/Shirts/9/shirts_9_0.webp"],
+		"imageUrls": ["/images/Shirts/9/shirts_9_0.webp"],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	}
 ]

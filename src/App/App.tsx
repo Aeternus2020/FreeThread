@@ -28,7 +28,6 @@ const App = () => {
 	const [burgerMenu, setBurgerMenu] = useState<null | HTMLElement>(null);
 	const [isActive, setIsActive] = useState(false);
 	const [openModal, setOpenModal] = useState(false);
-	const [activeButtonLang, setActiveButtonLang] = useState(1);
 	const [activeButtonMenu, setActiveButtonMenu] = useState(0);
 	const [openSubMenu, setOpenSubMenu] = useState(false);
 	const [valueSearch, setValueSearch] = useState('');
@@ -69,9 +68,6 @@ const App = () => {
 	const handleCloseSubMenu = () => {
 		setOpenSubMenu(false);
 	};
-	const handleActiveButtonLang = (buttonIndex: number) => {
-		setActiveButtonLang(buttonIndex);
-	};
 
 	const handleActiveButtonMenu = (buttonIndex: number) => {
 		setActiveButtonMenu(buttonIndex);
@@ -95,8 +91,6 @@ const App = () => {
 					handleSearch={handleSearch}
 				/>
 				<Header
-					activeButtonLang={activeButtonLang}
-					handleActiveButtonLang={handleActiveButtonLang}
 					handleOpenModal={handleOpenModal}
 					handleActiveButtonMenu={handleActiveButtonMenu}
 					activeButtonMenu={activeButtonMenu}
