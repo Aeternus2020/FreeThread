@@ -1,12 +1,21 @@
 {
     "version": 2,
     "builds": [
-      { "src": "public/*", "use": "@vercel/static" },
-      { "src": "dist/*", "use": "@vercel/static" },
-      { "src": "src/*", "use": "@vercel/node" }
+      {
+        "src": "src/index.tsx",
+        "use": "@vercel/static-build",
+        "config": { "outputDirectory": "dist" }
+      }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/index.html" }
+      { "src": "/favicon.ico", "dest": "/favicon.png" },
+      { "src": "/fonts/(.*)", "dest": "/dist/fonts/$1" },
+      { "src": "/images/(.*)", "dest": "/dist/images/$1" },
+      { "src": "/accessories.json", "dest": "/dist/accessories.json" },
+      { "src": "/comments.json", "dest": "/dist/comments.json" },
+      { "src": "/shirts.json", "dest": "/dist/shirts.json" },
+      { "src": "/teams.json", "dest": "/dist/teams.json" },
+      { "src": "/(.*)", "dest": "/src/$1" }
     ]
   }
   
