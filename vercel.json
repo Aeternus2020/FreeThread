@@ -3,16 +3,6 @@
     "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
     "builds": [
       { "src": "package.json", "use": "@vercel/static-build" }
-    ],
-    "routes": [
-      { "src": "/favicon.ico", "dest": "/favicon.png" },
-      { "src": "/fonts/(.*)", "dest": "/dist/fonts/$1" },
-      { "src": "/images/(.*)", "dest": "/dist/images/$1" },
-      { "src": "/accessories.json", "dest": "/dist/accessories.json" },
-      { "src": "/comments.json", "dest": "/dist/comments.json" },
-      { "src": "/shirts.json", "dest": "/dist/shirts.json" },
-      { "src": "/teams.json", "dest": "/dist/teams.json" },
-      { "src": "/(.*)", "dest": "/src/$1" }
     ]
   }
   
