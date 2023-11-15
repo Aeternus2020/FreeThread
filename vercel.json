@@ -1,11 +1,7 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "src/index.tsx",
-        "use": "@vercel/static-build",
-        "config": { "outputDirectory": "dist" }
-      }
+      { "src": "package.json", "use": "@vercel/static-build" }
     ],
     "routes": [
       { "src": "/favicon.ico", "dest": "/favicon.png" },
