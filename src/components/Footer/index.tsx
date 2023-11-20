@@ -16,8 +16,7 @@ import {
 	IconMenuSocial,
 	FooterLink,
 	IconMenuBank,
-	ArrowRight,
-	ArrowDown,
+	CustomLink,
 	SubMenuItem,
 	CustomLink,
 	CustomMenuItem,
@@ -45,45 +44,44 @@ const Footer: FC<FooterProps> = ({ handleOpenSubMenu, openSubMenu, handleCloseSu
 			<WrappMenuFooter>
 				<MenuFooter>
 					<TitleMenu>Про компанію</TitleMenu>
-					<CustomLink to="/about" onClick={upPage}>
-						Про нас
+					<CustomLink to="/about">
+						<li>Про нас</li>
 					</CustomLink>
-					<CatalogLink>
+					<CustomLink to="/">
 						<CustomMenuItem disableRipple divider onClick={handleOpenSubMenu}>
 							Каталог
-							{!openSubMenu ? <ArrowRight /> : <ArrowDown />}
 						</CustomMenuItem>
 					</CatalogLink>
 					<Collapse in={openSubMenu} timeout="auto" unmountOnExit>
 						<SubMenuItem to="/kiev">
-							<CustomSubMenuItem disableRipple divider onClick={upPage}>
+							<CustomSubMenuItem disableRipple divider onClick={handleCloseSubMenu}>
 								“Сорочки Київщини”
 							</CustomSubMenuItem>
 						</SubMenuItem>
-						<SubMenuItem to="/regions">
-							<CustomSubMenuItem disableRipple divider onClick={upPage}>
+						<SubMenuItem to="regions">
+							<CustomSubMenuItem disableRipple divider onClick={handleCloseSubMenu}>
 								“Регіони України”
 							</CustomSubMenuItem>
 						</SubMenuItem>
 						<SubMenuItem to="/grandmother">
-							<CustomSubMenuItem disableRipple divider onClick={upPage}>
+							<CustomSubMenuItem disableRipple divider onClick={handleCloseSubMenu}>
 								“Віднови вишиванку своєї бабусі”
 							</CustomSubMenuItem>
 						</SubMenuItem>
 						<SubMenuItem to="/accessories">
-							<CustomSubMenuItem disableRipple divider onClick={upPage}>
+							<CustomSubMenuItem disableRipple divider onClick={handleCloseSubMenu}>
 								Аксесуари
 							</CustomSubMenuItem>
 						</SubMenuItem>
 					</Collapse>
-					<CustomLink to="/delivery" onClick={upPage}>
-						Доставка і оплата
+					<CustomLink to="/delivery">
+						<li>Доставка і оплата</li>
 					</CustomLink>
-					<CustomLink to="/comments" onClick={upPage}>
-						Відгуки
+					<CustomLink to="/comments">
+						<li>Відгуки</li>
 					</CustomLink>
-					<CustomLink to="/contacts" onClick={upPage}>
-						Контакти
+					<CustomLink to="/contacts">
+						<li>Контакти</li>
 					</CustomLink>
 				</MenuFooter>
 				<MenuFooter>
