@@ -10,6 +10,8 @@ import { Product } from '../redux/slices/productsSlice';
 import { RootState } from '../redux/store/store';
 import { addProduct, addResult } from '../redux/slices/searchSlice';
 import RoutesInApp from '../components/Routes';
+import { useMenu } from '../hooks/useMenu';
+import { useToggleButton } from '../hooks/useToggleButton';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -20,9 +22,12 @@ const Wrapper = styled.div`
 
 const App = () => {
 	const dispatch: ThunkDispatch<RootState, unknown, AnyAction> = useDispatch();
-	const [burgerMenu, setBurgerMenu] = useState<null | HTMLElement>(null);
-	const [activeButtonLang, setActiveButtonLang] = useState(1);
-	const [activeButtonMenu, setActiveButtonMenu] = useState(0);
+	const [isVisible, toggleVisible] = useToggle(false);
+	const [isModalVisible, toggleModal] = useToggle(false);
+	const [catalog, openCatalog, closeCatalog] = useMenu(null);
+	const [burgerMenu, openBurgerMenu, closeBurgerMenu] = useMenu(null);
+	const [activeButtonLang, toggleButtonLang] = useToggleButton(1);
+	const [activeButtonMenu, toggleButtonMenu] = useToggleButton(0);
 	const [valueSearch, setValueSearch] = useState('');
 
 	const products = useSelector((state: RootState) => state.products.products) as Product[];
@@ -41,26 +46,6 @@ const App = () => {
 		dispatch(addResult(resultSearch));
 	};
 
-	const toggleActive = () => {
-		setIsActive(!isActive);
-	};
-
-	const handleClickBurgerMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
-		setBurgerMenu(event.currentTarget);
-	};
-
-	const handleCloseBurgerMenu = () => {
-		setBurgerMenu(null);
-	};
-
-	const handleActiveButtonLang = (buttonIndex: number) => {
-		setActiveButtonLang(buttonIndex);
-	};
-
-	const handleActiveButtonMenu = (buttonIndex: number) => {
-		setActiveButtonMenu(buttonIndex);
-	};
-
 	return (
 		<BrowserRouter>
 			<Wrapper>
@@ -73,17 +58,20 @@ const App = () => {
 				/>
 				<Header
 					activeButtonLang={activeButtonLang}
-					handleActiveButtonLang={handleActiveButtonLang}
+					handleActiveButtonLang={toggleButtonLang}
 					handleOpenModal={toggleModal}
-					handleActiveButtonMenu={handleActiveButtonMenu}
+					handleActiveButtonMenu={toggleButtonMenu}
 					activeButtonMenu={activeButtonMenu}
 					handleOpenSubMenu={toggleVisible}
 					openSubMenu={isVisible}
 					toggleActive={toggleVisible}
-					handleClickBurgerMenu={handleClickBurgerMenu}
-					handleCloseBurgerMenu={handleCloseBurgerMenu}
+					handleOpenBurgerMenu={openBurgerMenu}
+					handleCloseBurgerMenu={closeBurgerMenu}
+					handleOpenCatalog={openCatalog}
+					handleCloseCatalog={closeCatalog}
 					burgerMenu={burgerMenu}
-					isActive={isActive}
+					catalog={catalog}
+					isActive={isVisible}
 				/>
 				<RoutesInApp />
 				<Footer
