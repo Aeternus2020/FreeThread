@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+/* eslint-disable react/jsx-wrap-multilines */
+import React, { useState, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ThunkDispatch, AnyAction } from '@reduxjs/toolkit';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import Modal from '../components/Modal';
@@ -9,9 +10,10 @@ import Footer from '../components/Footer';
 import { Product } from '../redux/slices/productsSlice';
 import { RootState } from '../redux/store/store';
 import { addProduct, addResult } from '../redux/slices/searchSlice';
-import RoutesInApp from '../components/Routes';
+import routes from '../components/Routes';
 import { useMenu } from '../hooks/useMenu';
 import { useToggleButton } from '../hooks/useToggleButton';
+import LoadingAnimation from '../components/Loading';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -73,7 +75,19 @@ const App = () => {
 					catalog={catalog}
 					isActive={isVisible}
 				/>
-				<RoutesInApp />
+				<Routes>
+					{routes.map(({ path, component: Component }) => (
+						<Route
+							key={path}
+							path={path}
+							element={
+								<Suspense fallback={<LoadingAnimation />}>
+									<Component />
+								</Suspense>
+							}
+						/>
+					))}
+				</Routes>
 				<Footer
 					handleOpenSubMenu={toggleVisible}
 					openSubMenu={isVisible}
