@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import BurgerMenu from './BurgerMenu/BurgerMenu';
 import Search from './Search/Search';
 import MenuHeader from './MenuHeader/MenuHeader';
@@ -47,6 +48,12 @@ const Header: FC<HeaderProps> = ({
 	burgerMenu,
 	isActive,
 }) => {
+	const { i18n } = useTranslation();
+
+	const handleLanguageChange = (language: string) => {
+		i18n.changeLanguage(language);
+	};
+
 	return (
 		<header>
 			<HeaderWrapper>
@@ -70,6 +77,14 @@ const Header: FC<HeaderProps> = ({
 					<SearchDesktop>
 						<Search handleOpenModal={handleOpenModal} />
 					</SearchDesktop>
+					<SelectLanguage>
+						<BtnLang $active={i18n.language === 'ua'} onClick={() => handleLanguageChange('ua')}>
+							ua
+						</BtnLang>
+						<BtnLang $active={i18n.language === 'en'} onClick={() => handleLanguageChange('en')}>
+							en
+						</BtnLang>
+					</SelectLanguage>
 				</Wrapper>
 			</HeaderWrapper>
 			<SubHeader>
