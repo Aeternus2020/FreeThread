@@ -72,22 +72,50 @@ const BurgerMenu: FC<HeaderBurgerMenuProps> = React.memo(
 					</CatalogLink>
 					<Collapse in={openSubMenu} timeout="auto" unmountOnExit>
 						<SubMenuItem to="/kiev">
-							<MenuItem disableRipple divider onClick={handleCloseBurgerMenu}>
+							<MenuItem
+								disableRipple
+								divider
+								onClick={() => {
+									handleCloseBurgerMenu();
+									handleOpenSubMenu();
+								}}
+							>
 								{t('collection.kiev.title')}
 							</MenuItem>
 						</SubMenuItem>
 						<SubMenuItem to="regions">
-							<MenuItem disableRipple divider onClick={handleCloseBurgerMenu}>
+							<MenuItem
+								disableRipple
+								divider
+								onClick={() => {
+									handleCloseBurgerMenu();
+									handleOpenSubMenu();
+								}}
+							>
 								{t('collection.regions.title')}
 							</MenuItem>
 						</SubMenuItem>
 						<SubMenuItem to="/grandmother">
-							<MenuItem disableRipple divider onClick={handleCloseBurgerMenu}>
+							<MenuItem
+								disableRipple
+								divider
+								onClick={() => {
+									handleCloseBurgerMenu();
+									handleOpenSubMenu();
+								}}
+							>
 								{t('collection.grandmother.title')}
 							</MenuItem>
 						</SubMenuItem>
 						<SubMenuItem to="/accessories">
-							<MenuItem disableRipple divider onClick={handleCloseBurgerMenu}>
+							<MenuItem
+								disableRipple
+								divider
+								onClick={() => {
+									handleCloseBurgerMenu();
+									handleOpenSubMenu();
+								}}
+							>
 								{t('collection.accessories.title')}
 							</MenuItem>
 						</SubMenuItem>

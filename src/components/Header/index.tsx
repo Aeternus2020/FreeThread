@@ -54,6 +54,10 @@ const Header: FC<HeaderProps> = ({
 		i18n.changeLanguage(language);
 	};
 
+	const toggleSearch = () => {
+		handleOpenModal();
+	};
+
 	return (
 		<header>
 			<HeaderWrapper>
@@ -75,7 +79,7 @@ const Header: FC<HeaderProps> = ({
 				/>
 				<Wrapper>
 					<SearchDesktop>
-						<Search handleOpenModal={handleOpenModal} />
+						<Search handleOpenModal={toggleSearch} />
 					</SearchDesktop>
 					<SelectLanguage>
 						<BtnLang $active={i18n.language === 'ua'} onClick={() => handleLanguageChange('ua')}>
@@ -99,7 +103,7 @@ const Header: FC<HeaderProps> = ({
 					burgerMenu={burgerMenu}
 					isActive={isActive}
 				/>
-				<Search handleOpenModal={handleOpenModal} />
+				<Search handleOpenModal={toggleSearch} />
 			</SubHeader>
 		</header>
 	);

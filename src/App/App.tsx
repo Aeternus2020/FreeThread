@@ -10,7 +10,8 @@ import Modal from '../components/Modal';
 import Footer from '../components/Footer';
 import { Product } from '../redux/slices/productsSlice';
 import { RootState } from '../redux/store/store';
-import { addProduct, addResult } from '../redux/slices/searchSlice';
+import { useToggle } from '../hooks/useToggle';
+import { addProduct, addResult, clearSearch } from '../redux/slices/searchSlice';
 import routes from '../components/Routes';
 import { useMenu } from '../hooks/useMenu';
 import { useToggleButton } from '../hooks/useToggleButton';
@@ -26,6 +27,7 @@ const Wrapper = styled.div`
 const App = () => {
 	const dispatch: ThunkDispatch<RootState, unknown, AnyAction> = useDispatch();
 	const [isVisible, toggleVisible] = useToggle(false);
+	const [openFooterSubMenu, toggleFooterSubMenu] = useToggle(false);
 	const [isModalVisible, toggleModal] = useToggle(false);
 	const [catalog, openCatalog, closeCatalog] = useMenu(null);
 	const [burgerMenu, openBurgerMenu, closeBurgerMenu] = useMenu(null);
@@ -40,12 +42,16 @@ const App = () => {
 	};
 
 	const handleSearch = () => {
-		const resultSearch = products.filter((product) => {
-			return product.name.toLowerCase().includes(valueSearch.toLowerCase());
-		});
+		if (valueSearch.length > 0) {
+			const resultSearch = products.filter((product) => {
+				return product.name.toLowerCase().includes(valueSearch.toLowerCase());
+			});
 
+			dispatch(addResult(resultSearch));
+		} else {
+			dispatch(clearSearch());
+		}
 		setValueSearch('');
-		dispatch(addResult(resultSearch));
 	};
 
 	return (
@@ -87,9 +93,9 @@ const App = () => {
 					))}
 				</Routes>
 				<Footer
-					handleOpenSubMenu={toggleVisible}
-					openSubMenu={isVisible}
-					handleCloseSubMenu={toggleVisible}
+					handleOpenSubMenu={toggleFooterSubMenu}
+					openFooterSubMenu={openFooterSubMenu}
+					handleCloseSubMenu={toggleFooterSubMenu}
 				/>
 			</Wrapper>
 		</BrowserRouter>
