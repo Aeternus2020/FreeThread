@@ -6,7 +6,7 @@
 		"recommendations": "For durability and brightness, hand wash the shirt at 30-40 degrees, avoiding the use of a washing machine. After washing, gently shake off the water without wringing it out, and dry it on a flat surface, avoiding prolonged exposure to sunlight. When ironing the embroidered shirt, use gauze or fabric to protect the product from damage.",
 		"description": "Beautiful shirt Darina with embroidery that adds a unique national touch to your look.",
 		"collection": "grandmother",
-		"imageUrls": ["src/images/Shirts/1/shirts_1_0.webp", "src/images/Shirts/1/shirts_1_1.webp"],
+		"imageUrls": ["/images/Shirts/1/shirts_1_0.webp", "/images/Shirts/1/shirts_1_1.webp"],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
 	{
@@ -59,9 +59,9 @@
 		"description": "Elegant shirt Mariupol with traditional embroidery that will emphasize your unique style.",
 		"collection": "regions",
 		"imageUrls": [
-			"src/images/Shirts/5/shirts_5_0.webp",
-			"src/images/Shirts/5/shirts_5_1.webp",
-			"src/images/Shirts/5/shirts_5_2.webp"
+			"/images/Shirts/5/shirts_5_0.webp",
+			"/images/Shirts/5/shirts_5_1.webp",
+			"/images/Shirts/5/shirts_5_2.webp"
 		],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
@@ -86,7 +86,7 @@
 		"recommendations": "For durability and brightness, hand wash the shirt at 30-40 degrees, avoiding the use of a washing machine. After washing, gently shake off the water without wringing it out, and dry it on a flat surface, avoiding prolonged exposure to sunlight. When ironing the embroidered shirt, use gauze or fabric to protect the product from damage.",
 		"description": "Stylish shirt Independence with unique embroidery symbolizing the spirit of independence and dignity.",
 		"collection": "regions",
-		"imageUrls": ["src/images/Shirts/7/shirts_7_0.webp", "src/images/Shirts/7/shirts_7_1.webp"],
+		"imageUrls": ["/images/Shirts/7/shirts_7_0.webp", "/images/Shirts/7/shirts_7_1.webp"],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
 	{
@@ -96,7 +96,7 @@
 		"recommendations": "For durability and brightness, hand wash the shirt at 30-40 degrees, avoiding the use of a washing machine. After washing, gently shake off the water without wringing it out, and dry it on a flat surface, avoiding prolonged exposure to sunlight. When ironing the embroidered shirt, use gauze or fabric to protect the product from damage.",
 		"description": "Shirt Unity – a symbol of national unity and style in every stitch.",
 		"collection": "regions",
-		"imageUrls": ["src/images/Shirts/8/shirts_8_0.webp"],
+		"imageUrls": ["/images/Shirts/8/shirts_8_0.webp"],
 		"size": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"]
 	},
 	{
