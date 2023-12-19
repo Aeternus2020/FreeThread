@@ -47,19 +47,6 @@ const CustomLink = styled(NavLink)<BtnMenuProps>`
 	}
 `;
 
-const CatalogLink = styled.span`
-	color: ${({ theme }) => theme.colorText.primary};
-	text-transform: uppercase;
-	text-decoration: none;
-
-	& .MuiMenuItem-root {
-		font-family: ${({ theme }) => theme.fontFamily.text}, sans-serif;
-		font-size: 12px;
-		border-bottom: none;
-		padding: 16px;
-	}
-`;
-
 const BtnCatalogLine = styled.span<BtnMenuProps>`
 	height: 30px;
 	padding: ${(props) => (props.$active ? '0 0 0 8px' : 'none')};

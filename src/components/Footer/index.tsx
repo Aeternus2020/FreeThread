@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-/* eslint-disable max-len */
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Collapse } from '@mui/material';
@@ -20,13 +19,11 @@ import {
 	IconMenuBank,
 	CustomLink,
 	SubMenuItem,
-	CustomLink,
 	CustomMenuItem,
 	CustomSubMenuItem,
 	ArrowDown,
 	ArrowRight,
 } from '../../Theme/FooterThema';
-import { CatalogLink } from '../../Theme/BurgerMenuThema';
 import { CatalogLink } from '../../Theme/BurgerMenuThema';
 
 interface FooterProps {

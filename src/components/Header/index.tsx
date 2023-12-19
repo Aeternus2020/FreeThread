@@ -19,6 +19,8 @@ import {
 	PhoneNumber,
 	Wrapper,
 	SearchDesktop,
+	SelectLanguage,
+	BtnLang,
 	SubHeader,
 } from '../../Theme/HeaderThema';
 import logoBig from '../../images/logo/logo_free_thread.webp';
